@@ -1,0 +1,5 @@
+name: Upchuk Utils
+description: Utility module
+core: 8.x
+type: module
+package: Upchuk
