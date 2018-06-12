@@ -27,4 +27,20 @@ class EntityHelpers {
     return array_column($values, $column);
   }
 
+  /**
+   * Given an array of entities, return a basic array that can be used
+   * as options for a select list.
+   *
+   * @param \Drupal\Core\Entity\EntityInterface[] $entities
+   *
+   * @return array
+   */
+  public static function selectOptions(array $entities) {
+    $options = [];
+    foreach ($entities as $entity) {
+      $options[$entity->id()] = $entity->label();
+    }
+
+    return $options;
+  }
 }
